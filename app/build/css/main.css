@@ -1,0 +1,83 @@
+body {
+  background: #445930; }
+  body .main-container {
+    position: relative;
+    background: url("../static/lobby.jpg") no-repeat;
+    width: 900px;
+    height: 675px;
+    margin: auto; }
+
+.card {
+  width: 71px;
+  height: 96px;
+  /* Each card uses the same sprite background and two classes to position its value */
+  background: url("../static/classic-playing-cards.png"); }
+  .card.club {
+    background-position-y: -1px; }
+  .card.spade {
+    background-position-y: -99px; }
+  .card.heart {
+    background-position-y: -197px; }
+  .card.diamond {
+    background-position-y: -295px; }
+  .card.ace {
+    background-position-x: -1px; }
+  .card.two {
+    background-position-x: -74px; }
+  .card.three {
+    background-position-x: -147px; }
+  .card.four {
+    background-position-x: -220px; }
+  .card.five {
+    background-position-x: -293px; }
+  .card.six {
+    background-position-x: -366px; }
+  .card.seven {
+    background-position-x: -439px; }
+  .card.eight {
+    background-position-x: -512px; }
+  .card.nine {
+    background-position-x: -585px; }
+  .card.ten {
+    background-position-x: -658px; }
+  .card.jack {
+    background-position-x: -731px; }
+  .card.queen {
+    background-position-x: -804px; }
+  .card.king {
+    background-position-x: -877px; }
+
+.stats-container {
+  background: green;
+  position: absolute;
+  top: 50px;
+  height: 500px;
+  width: 400px;
+  overflow-y: scroll;
+  left: 50%;
+  transform: translateX(-50%); }
+  .stats-container .games-container .cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; }
+
+.lobby .commands-container {
+  position: absolute;
+  width: 400px;
+  height: 175px;
+  left: 50%;
+  background: green;
+  transform: translateX(-50%);
+  border: 1px solid white;
+  padding: 5px; }
+  .lobby .commands-container.user {
+    bottom: 130px; }
+  .lobby .commands-container.dealer {
+    top: 50px; }
+  .lobby .commands-container .deck-container {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; }
+    .lobby .commands-container .deck-container .card {
+      margin-right: 5px; }

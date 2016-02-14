@@ -1,0 +1,26 @@
+<div class="lobby">
+
+
+    <div class="commands-container dealer">
+        <div ng-if="game.players['DEALER'].thinking">Dealer is thinking what to do next</div>
+        <div class="deck-container">
+            <card ng-repeat="card in game.players['DEALER'].cards" value="card"></card>
+        </div>
+        <div>Points: {{game.players['DEALER'].points}}</div>
+        <div>WINNER: {{game.winner}}</div>
+    </div>
+
+    <div class="commands-container user">
+        <div class="deck-container">
+            <card ng-repeat="card in game.players[game.currentPlayer].cards" value="card"></card>
+        </div>
+        <div>Points: {{game.players[game.currentPlayer].points}}</div>
+
+
+        <button ng-click="newGame()">Start New Game</button>
+        <button ng-click="drawCard()">Hit</button>
+        <button ng-click="stand()">Stand</button>
+        <button ng-click="viewStats()">Stats</button>
+    </div>
+
+</div>

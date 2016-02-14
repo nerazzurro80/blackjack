@@ -1,0 +1,79 @@
+.card {
+  $height: 98px;
+  $width: 73px;
+  $margin: 1px;
+
+  width: $width - $margin * 2;
+  height: $height - $margin * 2;
+  /* Each card uses the same sprite background and two classes to position its value */
+  background: url('../static/classic-playing-cards.png');
+
+  &.club {
+    background-position-y: 0 - $margin;
+  }
+
+  &.spade {
+    background-position-y: -$height - $margin;
+  }
+
+  &.heart {
+    background-position-y: -$height * 2 - $margin;
+  }
+
+  &.diamond {
+    background-position-y: -$height * 3 - $margin;
+  }
+
+  &.ace {
+    background-position-x: 0 - $margin;
+  }
+
+  &.two {
+    background-position-x: -$width - $margin;
+  }
+
+  &.three {
+    background-position-x: -$width * 2 - $margin;
+  }
+
+  &.four {
+    background-position-x: -$width * 3 - $margin;
+  }
+
+  &.five {
+    background-position-x: -$width * 4 - $margin;
+  }
+
+  &.six {
+    background-position-x: -$width * 5 - $margin;
+  }
+
+  &.seven {
+    background-position-x: -$width * 6 - $margin;
+  }
+
+  &.eight {
+    background-position-x: -$width * 7 - $margin;
+  }
+
+  &.nine {
+    background-position-x: -$width * 8 - $margin;
+  }
+
+  &.ten {
+    background-position-x: -$width * 9 - $margin;
+  }
+
+  &.jack {
+    background-position-x: -$width * 10 - $margin;
+  }
+
+  &.queen {
+    background-position-x: -$width * 11 - $margin;
+  }
+
+  &.king {
+    background-position-x: -$width * 12 - $margin;
+  }
+
+}

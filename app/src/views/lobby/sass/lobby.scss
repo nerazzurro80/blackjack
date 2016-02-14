@@ -1,0 +1,33 @@
+.lobby {
+  $containers-background: #56713C;
+
+  .commands-container {
+    position: absolute;
+    width: 400px;
+    height: 175px;
+    left: 50%;
+    background: green;
+    transform: translateX(-50%);
+    border: 1px solid white;
+    padding: 5px;
+
+    &.user {
+      bottom: 130px;
+    }
+
+    &.dealer {
+      top: 50px;
+    }
+
+    .deck-container {
+      height: 100px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+
+      .card {
+        margin-right: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+$background: #445930;
+
+body {
+  background: $background;
+
+  .main-container {
+    position: relative;
+    background: url('../static/lobby.jpg') no-repeat;
+    width: 900px;
+    height: 675px;
+    margin: auto;
+  }
+}
