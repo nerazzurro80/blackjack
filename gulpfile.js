@@ -9,10 +9,10 @@ gulp.task('default', function(  )
 {
     runSequence(
         'babel',
-       // 'minify',
         'templates',
         'concat-js',
         'concat-sass',
-        'sass'
+        'sass',
+        'clean'
     );
 });

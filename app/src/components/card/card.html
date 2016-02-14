@@ -1,1 +1,12 @@
-<div class="card" ng-class="[cardCtrl.value.suit, cardCtrl.value.value]"></div>
+<div class="card container" ng-class="{'shown': contentShown}">
+    <div class="shadow content">
+        <div class="front face">
+            <img src="app/static/back-card.png"/>
+        </div>
+        <div class="back face center" ng-class="[cardCtrl.value.suit, cardCtrl.value.value]">
+        </div>
+    </div>
+</div>
+
+
+

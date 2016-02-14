@@ -91,23 +91,31 @@ app.factory("gameService", function($timeout, deckService, statsService) {
          */
         dealerPlays: function() {
 
+            var self = this;
             if ( (!currPlayer.busted && (currPlayer.points>dealer.points && !dealer.busted)) || dealer.cards.length === 1) {
 
                 if (dealer.cards.length === 1) {
                     this.drawCard('DEALER');
                 }
 
+                // dealer is thinking
                 dealer.thinking = true;
-                var self = this;
+
+                // random waiting time for dealer (between 1 and 2 seconds)
+                var waitingTime = Math.random() * (2000 - 1000) + 1000;
+
+                // set a timeout on the next action (to pretend dealer is thinking and give more interesting wait)
                 dealerThinkingTimeout = $timeout(function() {
                     self.drawCard('DEALER');
                     self.dealerPlays();
-                }, 5000);
+                }, waitingTime);
 
             } else {
-                // check winner if dealer completed its gaming
-                this.checkWinner();
-                dealer.thinking = false;
+                // check winner if dealer completed its gaming (timeout to reveal winner after card animation finished)
+                $timeout(function() {
+                    self.checkWinner();
+                    dealer.thinking = false;
+                }, 1000)
             }
 
         },

@@ -7,7 +7,6 @@ gulp.task('watch', function() {
     gulp.watch('app/src/**/*.js',
         function(){ runSequence(
             'babel',
-         //   'minify',
             'concat-js',
             'clean')
         });

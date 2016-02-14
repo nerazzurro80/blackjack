@@ -13,8 +13,9 @@ To run the app do the following
 
 `gulp` to build the production bundle (concat css and js)
 
+
 Tests
-________________
+----
 
 To run unit tests type:
 'karma start karma.conf.js'
