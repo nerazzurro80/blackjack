@@ -19,7 +19,7 @@ app.factory("deckService", function() {
         "jack": 10,
         "queen": 10,
         "king": 10,
-        "ace": 1
+        "ace": 11 // ace can have 1 or 11 as value according to total
     };
 
     return {

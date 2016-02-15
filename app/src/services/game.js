@@ -63,7 +63,7 @@ app.factory("gameService", function($timeout, deckService, statsService) {
                 game.players[player].cards.push(card);
             }
 
-            var points = countPoints(game.players[player].cards);
+            var points = this.countPoints(game.players[player].cards);
             game.players[player].points = points;
 
             if (points >= 21) {
@@ -138,19 +138,33 @@ app.factory("gameService", function($timeout, deckService, statsService) {
 
             // add this game to stats
             statsService.addGame(game);
+        },
+
+        /*
+         * This function counts the points of a given array of cards
+         */
+        countPoints: function(cards) {
+            let points = 0;
+            let acesFound = 0;
+
+            for (let i in cards) {
+                points += cards[i].valueNum;
+
+                if (cards[i].value === 'ace') {
+                    acesFound++;
+                }
+            }
+
+            // if aces where found, remove 10 if busting
+            while (acesFound && points>21) {
+                points -= 10;
+                acesFound--;
+            }
+
+            return points;
         }
 
     };
 
-    function countPoints(cards) {
-
-        let points = 0;
-
-        for (let i in cards) {
-            points += cards[i].valueNum;
-        }
-
-        return points;
-    }
 
 });
