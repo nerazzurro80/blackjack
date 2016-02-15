@@ -1,25 +1,6 @@
 ##Blackjack Game
 
-An AngularJS blackjack app .
-
-Description
-----
-
-To run the app do the following
-
-`npm install` to install the node dependencies
-
-`bower install` to install the bower dependencies
-
-`gulp` to build the production bundle (concat css and js)
-
-Open the app in Chrome browser
-
-Unit Tests
-----
-
-To run unit tests type:
-'karma start karma.conf.js'
+An AngularJS blackjack app by Salvatore Belcastro.
 
 Features
 ----
@@ -43,6 +24,26 @@ The angular app resides in the src folder:
     * stats service is responsible for collecting and mine data from past games. This controller is fed by the game service each time a game is finished
 * components contains reusable card component. This component defines the behaviour of a card with the logic of displaying the value via CSS sprite and animate its visualisation via CSS3 transitions
 * directives, currently empty/not created would be used for standard attributes directives for future needs
+
+Usage
+----
+
+To run the app do the following
+
+`npm install` to install the node dependencies
+
+`bower install` to install the bower dependencies
+
+`gulp` to build the production bundle (concat css and js)
+
+Open the app in Chrome browser
+
+Unit Tests
+----
+
+To run unit tests type:
+'karma start karma.conf.js'
+
 
 Future improvements
 ----
