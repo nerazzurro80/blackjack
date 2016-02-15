@@ -43,5 +43,4 @@ describe("gameService", function () {
         expect(gameService.countPoints(cards)).toBe(20);
     });
 
-
 });

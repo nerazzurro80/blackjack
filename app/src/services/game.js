@@ -48,7 +48,6 @@ app.factory("gameService", function($timeout, deckService, statsService) {
             this.drawCard('PLAYER 1', 2);
             this.drawCard('DEALER', 1);
 
-
             return game;
         },
 
@@ -95,20 +94,25 @@ app.factory("gameService", function($timeout, deckService, statsService) {
             if ( (!currPlayer.busted && (currPlayer.points>dealer.points && !dealer.busted)) || dealer.cards.length === 1) {
 
                 if (dealer.cards.length === 1) {
-                    this.drawCard('DEALER');
+                    // set a timeout on the next action (to pretend dealer is thinking and give more interesting wait)
+                    dealerThinkingTimeout = $timeout(function() {
+                        self.drawCard('DEALER');
+                        self.dealerPlays();
+                    });
+                } else {
+
+                    // dealer is thinking
+                    dealer.thinking = true;
+
+                    // random waiting time for dealer (between 1 and 2 seconds)
+                    var waitingTime = Math.random() * (2000 - 1000) + 1000;
+
+                    // set a timeout on the next action (to pretend dealer is thinking and give more interesting wait)
+                    dealerThinkingTimeout = $timeout(function() {
+                        self.drawCard('DEALER');
+                        self.dealerPlays();
+                    }, waitingTime);
                 }
-
-                // dealer is thinking
-                dealer.thinking = true;
-
-                // random waiting time for dealer (between 1 and 2 seconds)
-                var waitingTime = Math.random() * (2000 - 1000) + 1000;
-
-                // set a timeout on the next action (to pretend dealer is thinking and give more interesting wait)
-                dealerThinkingTimeout = $timeout(function() {
-                    self.drawCard('DEALER');
-                    self.dealerPlays();
-                }, waitingTime);
 
             } else {
                 // check winner if dealer completed its gaming (timeout to reveal winner after card animation finished)
