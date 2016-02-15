@@ -23,8 +23,8 @@ To run unit tests type:
 
 Future improvements
 ----
-Add Split functionality
-Add Multiplayer against Dealer functionality
-Add cross browser compatibility
-Add protractor tests
+* Add Split functionality
+* Add Multiplayer against Dealer functionality
+* Add cross browser compatibility
+* Add protractor tests
 
