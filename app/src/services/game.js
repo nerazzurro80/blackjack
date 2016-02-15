@@ -13,6 +13,8 @@ app.factory("gameService", function($timeout, deckService, statsService) {
     var currPlayer;
     var dealerThinkingTimeout;
 
+    // TODO use constants to define 'DEALER', 'PLAYER 1', etc...
+
     return {
         /*
          * creates a new game

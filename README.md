@@ -51,4 +51,5 @@ Future improvements
 * Add Multiplayer against Dealer functionality
 * Add cross browser compatibility
 * Add protractor tests
+* Use of constants for services variables ('DEALER', 'PLAYER 1')
 
