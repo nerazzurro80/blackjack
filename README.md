@@ -26,10 +26,10 @@ Features
 * The app allows a player to challange the Dealer
 * Two views are present: lobby to play and stats to see past games (localstorage)
 * Technologies and framework involved:
-** AngularJS 1.5 with components (card)
-** SASS
-** CSS3 animations (card flip)
-** ECMAScript 6 syntax, translated wit Babel
+    * AngularJS 1.5 with components (card)
+    * SASS
+    * CSS3 animations (card flip)
+    * ECMAScript 6 syntax, translated wit Babel
 
 
 Future improvements
