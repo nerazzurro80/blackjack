@@ -5,7 +5,7 @@
         <ul>
             <li>Dealer wins: <b>{{stats.dealerWins}}</b></li>
             <li>Player1 wins: <b>{{stats.playerWins}}</b></li>
-            <li>Time Spent in games: <b>{{stats.timeSpent/1000}} seconds<b/></li>
+            <li>Time Spent in games: <b>{{stats.timeSpent/1000}} seconds</b></li>
         </ul>
     </div>
 
@@ -25,7 +25,7 @@
            </div>
 
            <div class="player">
-               <div>Dealer cards: ({{::game.players['PLAYER 1'].points}})</div>
+               <div>Player 1 cards: ({{::game.players['PLAYER 1'].points}})</div>
                <div class="cards-container">
                    <card value="card" ng-repeat="card in game.players['PLAYER 1'].cards"></card>
                </div>
