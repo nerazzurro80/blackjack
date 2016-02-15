@@ -1,6 +1,7 @@
 /*
- * This the service that provides all method to interact with the Deck entity
- * It contains the instance of a deck, which is an array of cards
+ * This the service that provides all method to interact with the game entity
+ * It retrieved a deck from the deck service, and applies rules for a blackjack game
+ * It may be extended in future for functionality like SPLIT and MULTIPLAYER agains dealer
  */
 app.factory("gameService", function($timeout, deckService, statsService) {
 

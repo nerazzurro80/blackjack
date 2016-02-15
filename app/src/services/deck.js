@@ -1,6 +1,7 @@
 /*
  * This the service that provides all method to interact with the Deck entity
- * It contains the instance of a deck, which is an array of cards
+ * It contains the instance of a deck, which is an array of cards and could be reused for different games
+ * In this app it is used by the game service to handle a game
  */
 app.factory("deckService", function() {
 

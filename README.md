@@ -13,10 +13,18 @@ To run the app do the following
 
 `gulp` to build the production bundle (concat css and js)
 
+Open the app in Chrome browser
 
-Tests
+Unit Tests
 ----
 
 To run unit tests type:
 'karma start karma.conf.js'
+
+Future improvements
+----
+Add Split functionality
+Add Multiplayer against Dealer functionality
+Add cross browser compatibility
+Add protractor tests
 

@@ -20,7 +20,7 @@ app.controller("lobbyCtrl", function($scope, $location, gameService) {
         $location.path( "/stats" );
     }
 
-    // watch game changes
+    // watch game changes to set button states
     $scope.$watch(function() {
         return $scope.game && $scope.game.completed;
     }, function() {
