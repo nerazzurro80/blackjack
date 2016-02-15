@@ -2,12 +2,14 @@
 
 
     <div class="commands-container dealer">
-        <div ng-if="game.players['DEALER'].thinking">Dealer is thinking what to do next</div>
         <div class="deck-container">
             <card ng-repeat="card in game.players['DEALER'].cards" value="card"></card>
         </div>
         <div>Points: {{game.players['DEALER'].points}}</div>
         <div>WINNER: {{game.winner}}</div>
+        <div class="label">DEALER
+            <span ng-if="game.players['DEALER'].thinking">thinking...</span>
+        </div>
     </div>
 
     <div class="commands-container user">
@@ -22,7 +24,7 @@
             <button ng-disabled="!inGame || game.players[game.currentPlayer].turnComplete" ng-click="stand()">Stand</button>
             <button ng-disabled="inGame" ng-click="viewStats()">Stats</button>
         </div>
-
+        <div class="label">PLAYER 1 (you)</div>
     </div>
 
 </div>

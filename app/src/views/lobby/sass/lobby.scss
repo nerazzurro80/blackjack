@@ -4,7 +4,7 @@
   .commands-container {
     position: absolute;
     width: 400px;
-    height: 175px;
+    height: 180px;
     left: 50%;
     background: green;
     transform: translateX(-50%);
@@ -32,6 +32,15 @@
 
     .buttons-container {
       margin-top: 5px;
+    }
+
+    .label {
+      background: white;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      color: green;
+      padding: 3px;
     }
   }
 }
