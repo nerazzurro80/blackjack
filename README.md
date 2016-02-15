@@ -27,10 +27,10 @@ Features
 * Two views are present: lobby to play and stats to see past games (localstorage)
 * Technologies and framework involved:
     * AngularJS 1.5 with components (card)
-    * SASS
-    * CSS3 animations (card flip)
+    * SASS and CSS3 animations (card flip)
     * ECMAScript 6 syntax, translated wit Babel
-
+    * Standard dependencies stack management with Gulp and Bower
+    * Services are unit testable with karma
 
 Future improvements
 ----
