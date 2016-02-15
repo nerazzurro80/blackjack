@@ -41,6 +41,8 @@ The angular app resides in the src folder:
     * deck service is responsible to store deck instance and provide external utilities to it
     * game service is responsible to store a game representation and provides controller an access to it. Main BlackJack logic resides here
     * stats service is responsible for collecting and mine data from past games. This controller is fed by the game service each time a game is finished
+* components contains reusable card component. This component defines the behaviour of a card with the logic of displaying the value via CSS sprite and animate its visualisation via CSS3 transitions
+* directives, currently empty/not created would be used for standard attributes directives for future needs
 
 Future improvements
 ----
