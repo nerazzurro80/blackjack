@@ -11,7 +11,7 @@
 
  <div class="games-container">
 
-   <div class="game" ng-repeat="game in games">
+   <div class="game" ng-repeat="game in games track by $index">
 
        <div>Game started on <b>{{::game.startedAt | date:"MM/dd/yyyy 'at' h:mm:ssa"}}</b>
            and finished at <b>{{::game.finishedAt | date:"h:mm:ssa"}}</b><div>
