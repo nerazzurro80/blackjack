@@ -10,4 +10,17 @@ body {
     height: 675px;
     margin: auto;
   }
+
+  button {
+    width: 70px;
+    height: 30px;
+    background: white;
+    color: green;
+    border: 0;
+    margin-right: 5px;
+
+    &[disabled] {
+      background: grey;
+    }
+  }
 }

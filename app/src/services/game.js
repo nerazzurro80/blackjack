@@ -105,7 +105,7 @@ app.factory("gameService", function($timeout, deckService, statsService) {
                     dealer.thinking = true;
 
                     // random waiting time for dealer (between 1 and 2 seconds)
-                    var waitingTime = Math.random() * (2000 - 1000) + 1000;
+                    var waitingTime = Math.random() * (3000 - 2000) + 2000;
 
                     // set a timeout on the next action (to pretend dealer is thinking and give more interesting wait)
                     dealerThinkingTimeout = $timeout(function() {

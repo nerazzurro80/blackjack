@@ -12,11 +12,11 @@
     padding: 5px;
 
     &.user {
-      bottom: 130px;
+      bottom: 100px;
     }
 
     &.dealer {
-      top: 50px;
+      top: 20px;
     }
 
     .deck-container {
@@ -28,6 +28,10 @@
       .card {
         margin-right: 5px;
       }
+    }
+
+    .buttons-container {
+      margin-top: 5px;
     }
   }
 }

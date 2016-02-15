@@ -14,13 +14,15 @@
         <div class="deck-container">
             <card ng-repeat="card in game.players[game.currentPlayer].cards" value="card"></card>
         </div>
+
         <div>Points: {{game.players[game.currentPlayer].points}}</div>
+        <div class="buttons-container">
+            <button ng-disabled="inGame" ng-click="newGame()">New Game</button>
+            <button ng-disabled="!inGame || game.players[game.currentPlayer].turnComplete" ng-click="drawCard()">Hit</button>
+            <button ng-disabled="!inGame || game.players[game.currentPlayer].turnComplete" ng-click="stand()">Stand</button>
+            <button ng-disabled="inGame" ng-click="viewStats()">Stats</button>
+        </div>
 
-
-        <button ng-click="newGame()">Start New Game</button>
-        <button ng-click="drawCard()">Hit</button>
-        <button ng-click="stand()">Stand</button>
-        <button ng-click="viewStats()">Stats</button>
     </div>
 
 </div>

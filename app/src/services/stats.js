@@ -23,7 +23,7 @@ app.factory("statsService", function() {
          * return games
          */
         getGames: function() {
-            return games;
+            return games.reverse();
         },
 
         /*
@@ -59,7 +59,6 @@ app.factory("statsService", function() {
             stats.timeSpent += (game.finishedAt - game.startedAt);
 
         }
-        console.log(stats);
     }
 
 });
